@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :tweets
  # root "monsters#index"
    root "tweets#index"
+   
 end

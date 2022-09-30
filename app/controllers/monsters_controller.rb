@@ -5,7 +5,8 @@ class MonstersController < ApplicationController
 
   def show
     @monster = Monster.find(params[:id])
-    if(@monster.tweet.count=0) 
-      <%link_to "Twittear",'tweets#create'%>
+    if(@monster.tweets.count == 0) then
+       redirect_to  'tweets#new'
+       end
   end
 end
