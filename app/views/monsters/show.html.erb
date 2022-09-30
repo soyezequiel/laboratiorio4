@@ -1,1 +1,16 @@
-<%# Update me %><%= @monster.inspect %>
+<body>
+  
+        
+        <div class="izquierda">
+            <h1> <%= @monster.name%></h1>
+            <p> <%= @monster.description %></p>
+            <p class="eliminar">Eliminar</p> 
+        </div>
+        <div class="derecha">
+            <% @monster.tweets.each do |tweet| %>
+                <p class="TweerContenido"><%= tweet.content %></p><br>
+            <%end%>
+        </div>
+     
+
+</body>

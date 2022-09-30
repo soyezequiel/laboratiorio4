@@ -1,1 +1,12 @@
-<%# Update me %><%= @monsters.inspect %>
+<h1>Monstruos </h1>
+<% @monsters.each do |monster| %>
+    <li>
+    <ol class="elemento"><%= link_to monster.name, monster %>
+    <% if (monster.tweets.count>2) %>
+        <p class="destacado"> <%="Twittero destacado" %> </p>
+    <%end%>
+    
+    <br>
+    </ol>
+    </li>
+<%end%>
