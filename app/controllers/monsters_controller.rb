@@ -4,9 +4,11 @@ class MonstersController < ApplicationController
   end
 
   def show
-    @monster = Monster.find(params[:id])
-    if(@monster.tweets.count == 0) then
-       redirect_to  'tweets#new'
-       end
+   # @monster = Monster.find( params[:id])
+   @monster = Monster.find( params[:id])
+   # if(@monster.tweets.count == 0) then
+    #   redirect_to  'tweets#new'
+     #  end
   end
+ 
 end
